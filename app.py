@@ -6,7 +6,7 @@ from sklearn.ensemble import RandomForestClassifier
 from prediction import get_prediction, ordinal_encoder,labelencoder
 import tensorflow as tf
 from tensorflow import keras
-
+#import load_model
 #from load_model import get_model
 
 #model = get_model(model_path = r'model/keras_model.h5')
