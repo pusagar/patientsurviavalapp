@@ -37,14 +37,14 @@ def main():
                 
         apache_2_bodysystem = st.selectbox("Select State Factor: ", options=options_apache_2_bodysystem)
         #apache_3j_bodysystem = st.selectbox("Select State Factor: ", options=options_apache_3j_bodysystem)
-        solid_tumor_with_metastasis = st.slider("Does the patient has solid tumor with metastasis: ", 0.00, 1.00, value=0.,step = 0.05, format="%f")
-        lymphoma = st.slider("Does the patient has lymphoma : ", 0.00, 1.00, value=0., step = 0.05, format="%f")
-        leukemia = st.slider("Does the patient has leukemia : ", 0.00, 1.00, value=0.,step = 0.05, format="%f")
-        immunosuppression = st.slider("Does the patient has immunosuppression : ", 0.00, 1.00, value=0., step = 0.05, format="%f")
+        solid_tumor_with_metastasis = st.slider("Does the patient have solid tumor with metastasis: ", 0.00, 1.00, value=0.,step = 0.05, format="%f")
+        lymphoma = st.slider("Does the patient have lymphoma : ", 0.00, 1.00, value=0., step = 0.05, format="%f")
+        leukemia = st.slider("Does the patient have leukemia : ", 0.00, 1.00, value=0.,step = 0.05, format="%f")
+        immunosuppression = st.slider("Does the patient have immunosuppression : ", 0.00, 1.00, value=0., step = 0.05, format="%f")
         hepatic_failure = st.slider("Does the patient has hepatic_failure: ", 0.00, 1.00, value=0., step = 0.05, format="%f")
-        diabetes_mellitus = st.slider("Does the patient has diabetes_mellitus: ",0.00, 1.00, value=0., step = 0.05, format="%f")
-        cirrhosis = st.slider("Does the patient has cirrhosis : ",0.00, 1.00, value=0.,step = 0.05, format="%f")
-        aids = st.slider("Does the patient has aids : ", 0.00, 1.00, value=0.,step = 0.05, format="%f")    
+        diabetes_mellitus = st.slider("Does the patient have diabetes_mellitus: ",0.00, 1.00, value=0., step = 0.05, format="%f")
+        cirrhosis = st.slider("Does the patient have cirrhosis : ",0.00, 1.00, value=0.,step = 0.05, format="%f")
+        aids = st.slider("Does the patient have aids : ", 0.00, 1.00, value=0.,step = 0.05, format="%f")    
         submit = st.form_submit_button("Predict")
 
 
