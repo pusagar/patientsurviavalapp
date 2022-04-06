@@ -60,7 +60,10 @@ def main():
         pred = get_prediction(data=data, model=model)
         
         
-        st.write(f"The patient belongs to class :  {pred[0]}")
+        if pred[0] < 0.5:
+            st.write(f"The patient belongs to class :  {pred[0]} and will not survive")
+        else :
+            st.write(f"The patient belongs to class :  {pred[0]} and will survive")
 
 
 if __name__ == '__main__':
