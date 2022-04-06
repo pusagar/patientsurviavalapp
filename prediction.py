@@ -7,7 +7,7 @@ from tensorflow import keras
 #from load_model import get_model
 
 
-model = joblib.load(r'model/sc.pkl')
+#model = joblib.load(r'model/sc.pkl')
 encoder = LabelEncoder()
 
 def ordinal_encoder(input_val, feats): 
