@@ -53,8 +53,8 @@ def main():
         #apache_3j_bodysystem = labelencoder(apache_3j_bodysystem, options_apache_3j_bodysystem)        
 
 
-        data = np.array(['apache_2_bodysystem','solid_tumor_with_metastasis','lymphoma','leukemia',
-       'immunosuppression','hepatic_failure','diabetes_mellitus','cirrhosis', 'aids']).reshape(1,-1)        
+        data = np.array([apache_2_bodysystem,solid_tumor_with_metastasis,lymphoma,leukemia,
+       immunosuppression,hepatic_failure,diabetes_mellitus,cirrhosis,aids]).reshape(1,-1)        
         print(data)
         
         pred = get_prediction(data=data, model=model)
