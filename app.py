@@ -49,21 +49,36 @@ def main():
 
 
     if submit:       
-        apache_2_bodysystem = ordinal_encoder(apache_2_bodysystem, options_apache_2_bodysystem)
+        apache_2_bodysystem = labelencoder(apache_2_bodysystem, options_apache_2_bodysystem)
         #apache_3j_bodysystem = labelencoder(apache_3j_bodysystem, options_apache_3j_bodysystem)        
 
 
         data = np.array([apache_2_bodysystem,solid_tumor_with_metastasis,lymphoma,leukemia,
-       immunosuppression,hepatic_failure,diabetes_mellitus,cirrhosis,aids]).reshape(1,-1)        
+                         immunosuppression,hepatic_failure,diabetes_mellitus,cirrhosis,aids]).reshape(1,-1)        
         print(data)
         
         pred = get_prediction(data=data, model=model)
+        pred1 = pred[0].argmax(axis=-1)
+        maxpredclass = pred[0].max(axis=-1)
+        dead = pred[0]
+        percent = np.round((maxpredclass*100),2)
+        alive = 100 - percent
+        st.write(maxpredclass)
         
         
-        if pred[0] < 0.5:
-            st.write(f"The patient belongs to class :  {pred[0]} and will not survive")
-        else :
-            st.write(f"The patient belongs to class :  {pred[0]} and will survive")
+        #st.write(pred1)
+        print("pred0", pred[0])
+        print("maxpredclass:", maxpredclass)
+        st.write(f"As per the model predicion , the patient has  {alive} %age chances of surviving.")
+        
+        #predicted_class = pred.argmax(axis=-1)
+        #print(predicted_class)
+        
+        
+        #if predicted_class == 0:
+            #st.write(f"The patient belongs to class :  {predicted_class} and will not survive")
+        #else :
+            #st.write(f"The patient belongs to class :  {predicted_class} and will survive")
 
 
 if __name__ == '__main__':
